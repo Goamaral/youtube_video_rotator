@@ -7,11 +7,12 @@
 
       case "/watch":
         if (location.search.includes("list")) {
+          if (!confirm("Use youtube rotator?")) return
+
           let one_second = 1000
           let one_minute = 60 * one_second
           let ten_minutes = 10 * one_minute
-          let done = false
-
+-
           setTimeout(() => {
             document.querySelector("#movie_player > div.ytp-chrome-bottom"
              + " > div.ytp-chrome-controls"
